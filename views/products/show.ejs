@@ -10,14 +10,16 @@
 <body>
     <h1>Product</h1>
     Name : <%= product.name %><br>
-        ID : <%= product.id %><br>
-            Price : <%= product.price %><br>
-                Category : <%= product.category %><br>
-                    <a href="/products">All Products</a>
-                    <a href="/products/<%= product._id%>/edit">Edit</a>
-                    <form action="/products/<%= product._id%>?_method=DELETE" method="POST">
-                        <button>delete</button>
-                    </form>
+    <ul>
+        <li>ID : <%= product.id %></li>
+        <li>Price : £<%= product.price %></li>
+        <li>Category : <a href="/products?category=<%= product.category %>"><%= product.category %></a></li>
+    </ul>
+    <a href="/products">All Products</a>
+    <a href="/products/<%= product._id%>/edit">Edit</a>
+    <form action="/products/<%= product._id%>?_method=DELETE" method="POST">
+        <button>delete</button>
+    </form>
 </body>
 </body>
 
